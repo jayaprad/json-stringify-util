@@ -1,0 +1,21 @@
+{
+  "name": "json-stringify-util",
+  "version": "1.0.0",
+  "description": "A Node.js module designed to handle the serialization and deserialization of JavaScript objects, including functions.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayaprad/json-stringify-util"
+  },
+  "keywords": [
+    "JSON",
+    "JSON serialization",
+    "JSON Deserialization",
+    "JSON stringify",
+    "JSON parse",
+    "JSON stringify with functions",
+    "JSON parse with functions"
+  ],
+  "author": "Jaya Prakash Dasari <dasari.prakash@gmail.com>",
+  "license": "MIT"
+}
