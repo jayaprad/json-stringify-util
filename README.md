@@ -15,7 +15,7 @@ npm install --save json-stringify-util
 **Importing the Module**
 
 ```javascript
-const { JSONUtil } = require("json-function-utility");
+const { JSONUtil } = require("json-stringify-util");
 ```
 
 **Example Usage**
