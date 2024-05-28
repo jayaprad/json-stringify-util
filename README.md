@@ -2,6 +2,10 @@
 
 A Node.js module for serializing and deserializing JavaScript objects containing functions.
 
+![npm](https://img.shields.io/npm/v/json-stringify-util)
+![Downloads](https://img.shields.io/npm/dm/json-stringify-util)
+![License](https://img.shields.io/npm/l/json-stringify-util)
+
 ### Installation
 
 You can install this module via npm:
