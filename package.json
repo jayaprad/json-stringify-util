@@ -1,6 +1,6 @@
 {
   "name": "json-stringify-util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Node.js module designed to handle the serialization and deserialization of JavaScript objects, including functions.",
   "main": "index.js",
   "repository": {
