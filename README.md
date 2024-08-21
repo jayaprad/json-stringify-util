@@ -14,9 +14,9 @@ You can install this module via npm:
 npm install --save json-stringify-util
 ```
 
-## Usage
+## Usage in CommonJS
 
-**Importing the Module**
+**Requiring the Module**
 
 ```javascript
 const { JSONUtil } = require("json-stringify-util");
@@ -34,15 +34,60 @@ const obj1 = {
   },
 };
 
+// Stringifies the object
 const jsonString = JSONUtil.stringify(obj1);
+
+// Outputs: {"prop1":"value","prop2":"() => {\n    console.log(\"This is a function\");\n  }"}
 console.log(jsonString);
 ```
 
 Parse a JSON String with Functions
 
 ```javascript
+// Parses the JSON string
 const obj2 = JSONUtil.parse(jsonString);
-obj2.prop2(); // Outputs: "This is a function"
+
+// Invokes the function
+// Outputs: "This is a function"
+obj2.prop2();
+```
+
+## Usage in ES Modules
+
+**Importing the Module**
+
+```javascript
+import { JSONUtil } from "json-stringify-util";
+```
+
+**Example Usage**
+
+Stringify an Object with Functions
+
+```javascript
+const obj1 = {
+  prop1: "value",
+  prop2: () => {
+    console.log("This is a function");
+  },
+};
+
+// Stringifies the object
+const jsonString = JSONUtil.stringify(obj1);
+
+// Outputs: {"prop1":"value","prop2":"() => {\n    console.log(\"This is a function\");\n  }"}
+console.log(jsonString);
+```
+
+Parse a JSON String with Functions
+
+```javascript
+// Parses the JSON string
+const obj2 = JSONUtil.parse(jsonString);
+
+// Invokes the function
+// Outputs: "This is a function"
+obj2.prop2();
 ```
 
 ## API

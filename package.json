@@ -2,17 +2,26 @@
   "name": "json-stringify-util",
   "version": "1.0.3",
   "description": "A Node.js module designed to handle the serialization and deserialization of JavaScript objects, including functions.",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build:cjs": "babel ./index.js --out-file dist/index.cjs.js --config-file ./babel/babel.config.cjs.js",
+    "build:esm": "babel ./index.js --out-file dist/index.esm.js --config-file ./babel/babel.config.js",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jayaprad/json-stringify-util"
   },
   "keywords": [
+    "json-stringify-util",
     "serialization",
     "deserialization",
     "objects",
     "functions",
     "JSON",
+    "JSON Util",
+    "JSON stringify",
     "JSON serialization",
     "JSON deserialization",
     "data serialization",
@@ -72,5 +81,11 @@
     "WebSocket data deserialization"
   ],
   "author": "Jaya Prakash Dasari <dasari.prakash@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.8",
+    "@babel/preset-env": "^7.25.3"
+  }
 }
